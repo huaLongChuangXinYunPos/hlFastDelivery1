@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!--主界面中   radioBtn按钮的效果 -->
+    <style name="MainRadioBtnStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--list   item的样式  -->
+    <style name="QFragmentListThremStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/highRed</item>
+    </style>
+
+    <!--设置dialog  的样式-->
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item><!--标题栏是否隐藏，这就是我们上面显示的标题栏-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--dialog  中btn样式-->
+    <style name="MainQueryDialogBtnStyle">
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:background">@drawable/dialog_btn_selector</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@drawable/query_btn_text_selector</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+</resources>

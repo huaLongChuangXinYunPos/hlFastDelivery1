@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:paddingTop="80dp"
+             >
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/consumer_dialog_view"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:background="@drawable/dialog_shape"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/logo"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="输入单号查询"
+                android:textSize="18sp"
+                android:textColor="#22AF35"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/highRed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单号:"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                />
+            <EditText
+                android:id="@+id/dialog_input_queryno"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:hint="输入单号查询"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:inputType="number"
+                android:background="@drawable/query_bg_shape"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/dialog_input_queryexit"
+                style="@style/MainQueryDialogBtnStyle"
+                android:layout_marginRight="25dp"
+                android:text="取消"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <Button
+                android:id="@+id/dialog_input_querysure"
+                style="@style/MainQueryDialogBtnStyle"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:text="确认"
+                android:layout_marginBottom="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@color/lightblack"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyTextColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>
+

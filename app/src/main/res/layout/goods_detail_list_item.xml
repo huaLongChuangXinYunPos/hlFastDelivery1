@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:id="@+id/detail_list_image"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="3dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/detail_list_image"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/detail_goodsname"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="品名:啤酒"
+            android:textColor="@color/highRed"
+            />
+        <TextView
+            android:id="@+id/detail_list_cbarcodeprice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="条码:12312231,单价:12.7元"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/highRed"
+            />
+
+        <TextView
+            android:id="@+id/detail_list_amount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="规格:500ml"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/highRed"
+            android:gravity="bottom|right"
+            />
+    </LinearLayout>
+</RelativeLayout>

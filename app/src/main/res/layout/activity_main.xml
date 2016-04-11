@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zhaoq.hl.fastdelivery.activity.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/main_viewpager_bg_shape"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/anim_pregress"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@anim/progress_anim"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2558AE"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#686C76"/>
+
+            <RadioGroup
+                android:id="@+id/main_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:background="@color/main_radionbtn_bg_normal"
+                >
+                <RadioButton
+                    android:paddingTop="2dp"
+                    android:id="@+id/main_tab_query"
+                    style="@style/MainRadioBtnStyle"
+                    android:drawableTop="@drawable/tab1_selector"
+                    android:text="我要查单"
+                    android:checked="true"
+                    android:background="@drawable/main_radiobtn_bg_selector"
+                    android:textColor="@drawable/main_tab_text_selector"
+                    />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+
+                <RadioButton
+                    android:paddingTop="2dp"
+                    android:id="@+id/main_tab_result"
+                    style="@style/MainRadioBtnStyle"
+                    android:drawableTop="@drawable/tab2_selector"
+                    android:text="商品信息"
+                    android:background="@drawable/main_radiobtn_bg_selector"
+                    android:textColor="@drawable/main_tab_text_selector"
+                    />
+            </RadioGroup>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

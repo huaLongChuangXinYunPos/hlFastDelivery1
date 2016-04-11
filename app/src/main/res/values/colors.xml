@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="blue">#3F51B5</color>
+    <color name="lowBlue">#47F05F</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#F01317</color>
+
+    <color name="lowGray">#8E9097</color>
+
+    <color name="lowRed">#FF4081</color>
+    <color name="editTextColor">#7EC4E4</color>
+    <color name="highRed">#FF6B00</color>
+
+    <color name ="main_radionbtn_bg_press">#2558AE</color>
+    <color name ="main_radionbtn_bg_normal">#17192B</color>
+
+    <color name="lightblack">#ff202020</color>
+</resources>

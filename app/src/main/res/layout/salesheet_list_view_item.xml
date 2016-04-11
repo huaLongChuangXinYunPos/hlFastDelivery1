@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="14dp"
+              android:background="@drawable/list_item_selector"
+    >
+    <TextView
+        android:id="@+id/text_sale_no"
+        style="@style/QFragmentListThremStyle"
+        android:textSize="15sp"
+        android:textColor="@color/red"
+        android:text="单号"
+        />
+
+    <TextView
+        android:id="@+id/text_sale_shop"
+        style="@style/QFragmentListThremStyle"
+        android:textSize="15sp"
+        android:text="店铺"
+        />
+
+    <TextView
+        android:id="@+id/text_money"
+        style="@style/QFragmentListThremStyle"
+        android:textSize="15sp"
+        android:text="金额"
+        />
+
+
+    <TextView
+        android:id="@+id/text_exactly_money"
+        android:textSize="15sp"
+        style="@style/QFragmentListThremStyle"
+        android:textColor="@color/red"
+        android:text="实付"
+        />
+    <TextView
+        android:id="@+id/text_user_name"
+        style="@style/QFragmentListThremStyle"
+        android:textSize="15sp"
+        android:textColor="@color/red"
+        android:text="用户名"
+        />
+
+    <TextView
+        android:id="@+id/text_sale_date"
+        style="@style/QFragmentListThremStyle"
+        android:textSize="15sp"
+        android:text="日期"
+        />
+</LinearLayout>

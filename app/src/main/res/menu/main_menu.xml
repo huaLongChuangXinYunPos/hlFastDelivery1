@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhaoqiang="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_input"
+        android:title="输入单号"
+        zhaoqiang:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_search"
+        />
+
+    <item
+        android:id="@+id/main_menu_scan"
+        android:title="扫描单号"
+        zhaoqiang:showAsAction="always"
+        android:icon="@drawable/scan_code_bar_bg_selector"
+        />
+
+</menu>
