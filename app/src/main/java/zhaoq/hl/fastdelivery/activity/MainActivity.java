@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -23,6 +24,8 @@ import com.zbar.lib.CaptureActivity;
 import java.util.ArrayList;
 
 import zhaoq.hl.fastdelivery.ConsumDialog;
+import zhaoq.hl.fastdelivery.utils.ApplicationUtils;
+import zhaoq.hl.fastdelivery.utils.MyToast;
 import zhaoq.hl.fastdelivery.view.ViewPagerTranfAnim;
 import zhaoq.hl.fastdelivery.callback.DialogCallback;
 import zhaoq.hl.fastdelivery.R;
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         radt1 = (RadioButton) findViewById(R.id.main_tab_query);
         radt2 = (RadioButton) findViewById(R.id.main_tab_result);
 
@@ -207,5 +212,24 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 }
             }
         }
+    }
+
+    //间隔时间
+    private static long exectTime = 0;
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if(keyCode == KeyEvent.KEYCODE_BACK &&
+                event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis()-exectTime)>2000){//第一次点击
+                MyToast.ToastIncenter(this,"再次点击退出程序").show();
+                exectTime = System.currentTimeMillis();
+            }else{
+                finish();
+                ApplicationUtils.getInstance().exit();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

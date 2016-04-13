@@ -17,6 +17,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
@@ -42,6 +43,7 @@ import zhaoq.hl.fastdelivery.callback.TaskCallback;
 import zhaoq.hl.fastdelivery.entity.VersionEntity;
 import zhaoq.hl.fastdelivery.task.GetVersionTask;
 import zhaoq.hl.fastdelivery.task.TaskResult;
+import zhaoq.hl.fastdelivery.utils.ApplicationUtils;
 import zhaoq.hl.fastdelivery.utils.MyToast;
 import zhaoq.hl.fastdelivery.utils.ParseUtils;
 
@@ -121,6 +123,10 @@ public class SplashActivity extends AppCompatActivity implements TaskCallback {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+
+        //添加进应用实例
+        ApplicationUtils.getInstance().addActivity(this);
+
         tvProgress = (TextView) findViewById(R.id.tv_progress);
 
         sp = getSharedPreferences(Configs.SP_FILE_NAME,MODE_PRIVATE);
@@ -250,5 +256,24 @@ public class SplashActivity extends AppCompatActivity implements TaskCallback {
             enterHome();
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    //再按一次   退出程序
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode ==KeyEvent.KEYCODE_BACK &&
+                event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis() - exitTime)>2000){
+                MyToast.ToastIncenter(this,"再按一次推出程序").show();
+                exitTime = System.currentTimeMillis();
+            }else{
+                finish();
+                ApplicationUtils.getInstance().exit();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
